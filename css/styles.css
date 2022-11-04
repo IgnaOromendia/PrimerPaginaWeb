@@ -1,0 +1,65 @@
+:root {
+    --blanco: #FFFFFF;
+    --negro: #212121;
+    --primario: #FFc107;
+    --secundario: #0097A7;
+    --gris: #757575;    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {  /* Aplica de forma general a todos los textos*/
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem; /* 1rem = 10px */
+}
+
+.titulo span { 
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 120rem;
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; = 
+    margin: 0 auto 0 auto; = */
+    margin: 0 auto;
+}
+
+.navBackground {
+    background-color: var(--secundario);
+}
+
+.navPrincipal {    
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navPrincipal {
+        flex-direction: row;   
+        justify-content: space-between;
+    }
+}
+
+.navPrincipal a {    
+    color: var(--blanco);
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navPrincipal a:hover {
+    background-color: var(--primario);
+    color: var(--negro);
+}

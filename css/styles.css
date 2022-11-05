@@ -12,9 +12,15 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: mandatory;
 }
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+.servicios, .navPrincipal {
+    scroll-snap-align: center;
+    scroll-snap-stop: always; 
 }
 
 body {  /* Aplica de forma general a todos los textos*/
@@ -154,11 +160,12 @@ h1,h2,h3 {
 }
 
 /*Servicios*/
-
-.servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
 }
 
 .servicio{

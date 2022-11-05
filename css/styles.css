@@ -49,12 +49,17 @@ body {  /* Aplica de forma general a todos los textos*/
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
 
 @media (min-width: 480px) {
     .button{
         width: auto;
     }
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .sombra {
@@ -180,4 +185,72 @@ h1,h2,h3 {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+/*Formulario*/
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem,100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .contenedorCampos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+
+    .campo:nth-child(3), .campo:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.enviar .button {
+    width: 100%;
+}
+
+/*Footer*/
+
+.Footer {
+    text-align: center;
 }

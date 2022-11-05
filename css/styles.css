@@ -3,8 +3,11 @@
     --negro: #212121;
     --primario: #FFc107;
     --secundario: #0097A7;
-    --gris: #757575;    
+    --gris: #757575;
+    --colorFondoGris: #dfe9f3;
 }
+
+/*Global*/
 
 html {
     font-size: 62.5%;
@@ -17,22 +20,7 @@ html {
 body {  /* Aplica de forma general a todos los textos*/
     font-size: 16px;
     font-family: 'Krub', sans-serif;
-}
-
-h1 {
-    font-size: 3.8rem; /* 1rem = 10px */
-}
-
-h2 {
-    font-size: 2.8rem; /* 1rem = 10px */
-}
-
-h3 {
-    font-size: 1.8rem; /* 1rem = 10px */
-}
-
-h1,h2,h3 {
-    text-align: center;
+    background-image: linear-gradient(to top, var(--colorFondoGris) 0%, var(--blanco) 100%);
 }
 
 .titulo span {
@@ -69,6 +57,17 @@ h1,h2,h3 {
     }
 }
 
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*Navegador*/
+
 .navBackground {
     background-color: var(--secundario);
 }
@@ -85,6 +84,7 @@ h1,h2,h3 {
     }
 }
 
+
 .navPrincipal a {    
     color: var(--blanco);
     text-align: center;
@@ -99,12 +99,35 @@ h1,h2,h3 {
     color: var(--negro);
 }
 
+
+
+/*Tipografia*/
+
+h1 {
+    font-size: 3.8rem; /* 1rem = 10px */
+}
+
+h2 {
+    font-size: 2.8rem; /* 1rem = 10px */
+}
+
+h3 {
+    font-size: 1.8rem; /* 1rem = 10px */
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+/*Hero*/
+
 .hero {
     background-image: url("../Images/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenidoHero {
@@ -123,4 +146,38 @@ h1,h2,h3 {
 
 .contenidoHero h2, .contenidoHero p {
     color: var(--blanco);
+}
+
+/*Servicios*/
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
